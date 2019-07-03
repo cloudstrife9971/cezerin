@@ -18,7 +18,7 @@ const dbUrl =
 
 module.exports = {
 	// used by Store (server side)
-	apiBaseUrl: `http://localhost:3z001/api/v1`,
+	apiBaseUrl: `http://localhost:3001/api/v1`,
 
 	// used by Store (server and client side)
 	ajaxBaseUrl: `http://localhost:3001/ajax`,

@@ -19,30 +19,30 @@ const IndexContainer = props => {
 		{
 			link: '/anime/itachi-uchiha',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1558728539/Itachi_Uchiha_2_Half_Sleeve-Black_1024x1024.png',
-			name: 'Naruto shirt for men',
-			price: '$400'
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1558728539/ApatoTees/Itachi_Uchiha_2_Half_Sleeve-Black_1024x1024.png',
+			name: 'Itachi Uchiha',
+			price: '$200'
 		},
 		{
 			link: '/anime/roronoa-zoro',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658382/Roronoa_Zoro_Half_Sleeve-_White_300x.png',
-			name: 'demo',
-			price: '$400'
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658382/ApatoTees/Roronoa_Zoro_Half_Sleeve-_White_300x.png',
+			name: 'Roronoa Zoro',
+			price: '$200'
 		},
 		{
 			link: '/anime/kame-symbol-2-2',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658382/Kame_Symbol_Half_Sleeve-_Red_300x.png',
-			name: 'demo',
-			price: '$400'
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658382/ApatoTees/Kame_Symbol_Half_Sleeve-_Red_300x.png',
+			name: 'Kame Symbol',
+			price: '$200'
 		},
 		{
 			link: '/anime/its-an-anime_t',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1558273747/It_s_An_Anime_Things_Half_Sleeve-Navy_Blue_300x.png',
-			name: 'demo',
-			price: '$400'
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1558273747/ApatoTees/It_s_An_Anime_Things_Half_Sleeve-Navy_Blue_300x.png',
+			name: 'Its An Anime',
+			price: '$200'
 		}
 	];
 
@@ -51,29 +51,29 @@ const IndexContainer = props => {
 		{
 			link: '/football/manchester-united',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658403/Manchester_United_2_Half_Sleeve-Red_300x.png',
-			name: 'Naruto shirt for men',
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658403/ApatoTees/Manchester_United_2_Half_Sleeve-Red_300x.png',
+			name: 'Manchester United',
 			price: '$200'
 		},
 		{
 			link: '/football/mancheste-city',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658403/Manchester_City_Half_Sleeve-Navy_Blue_300x.png',
-			name: 'demo',
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658403/ApatoTees/Manchester_City_Half_Sleeve-Navy_Blue_300x.png',
+			name: 'Mancheste City',
 			price: '$200'
 		},
 		{
 			link: '/football/real-madrid',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658403/Real_Madrid_Half_Sleeve-Black_300x.png',
-			name: 'demo',
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658403/ApatoTees/Real_Madrid_Half_Sleeve-Black_300x.png',
+			name: 'Real Madrid',
 			price: '$200'
 		},
 		{
 			link: '/football/psg',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658403/PSG_Half_Sleeve-_White_300x.png',
-			name: 'demo',
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658403/ApatoTees/PSG_Half_Sleeve-_White_300x.png',
+			name: 'PSG',
 			price: '$200'
 		}
 	];
@@ -81,29 +81,29 @@ const IndexContainer = props => {
 		{
 			link: '/gaming/team-navi',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658418/Team_Navi_Half_Sleeve-_Yellow_300x.png',
-			name: 'Naruto shirt for men',
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658418/ApatoTees/Team_Navi_Half_Sleeve-_Yellow_300x.png',
+			name: 'Team Navi',
 			price: '$200'
 		},
 		{
-			link: '/gaming/keep-calm-and-play',
+			link: '/gaming/Eat-Sleep-Dota-Repeat',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1558727956/Eat_Sleep_Dota_Repeat_Half_Sleeve-Black_300x.png',
-			name: 'demo',
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1558727956/ApatoTees/Eat_Sleep_Dota_Repeat_Half_Sleeve-Black_300x.png',
+			name: 'Eat Sleep Dota Repeat',
 			price: '$200'
 		},
 		{
 			link: '/gaming/eat-sleep-fortnite',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1558728212/EAT_Sleep_Fortnite_Repeat_Half_Sleeve-Red-min_300x.png',
-			name: 'demo',
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1558728212/ApatoTees/EAT_Sleep_Fortnite_Repeat_Half_Sleeve-Red-min_300x.png',
+			name: 'Eat Sleep Fortnite',
 			price: '$200'
 		},
 		{
 			link: '/gaming/lol',
 			src:
-				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658418/LOL_Keywords-Half_Sleeve_White-min_300x.png',
-			name: 'demo',
+				'https://res.cloudinary.com/dmjvm8vzc/image/upload/v1557658418/ApatoTees/LOL_Keywords-Half_Sleeve_White-min_300x.png',
+			name: 'LOL',
 			price: '$200'
 		}
 	];

@@ -1,100 +1,93 @@
-import React from "react";
-import { Route } from "react-router";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { animateScroll } from "react-scroll";
+import React from 'react';
+import { Route } from 'react-router';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { animateScroll } from 'react-scroll';
 
-import IndexContainer from "./containers/index";
-import SharedContainer from "./containers/shared";
-import CategoryContainer from "./containers/category";
-import ProductContainer from "./containers/product";
-import PageContainer from "./containers/page";
-import CheckoutContainer from "./containers/checkout";
-import CheckoutSuccessContainer from "./containers/checkoutSuccess";
-import NotFoundContainer from "./containers/notfound";
-import SearchContainer from "./containers/search";
+import IndexContainer from './containers/index';
+import SharedContainer from './containers/shared';
+import CategoryContainer from './containers/category';
+import ProductContainer from './containers/product';
+import PageContainer from './containers/page';
+import CheckoutContainer from './containers/checkout';
+import CheckoutSuccessContainer from './containers/checkoutSuccess';
+import NotFoundContainer from './containers/notfound';
+import SearchContainer from './containers/search';
 
-import { setCurrentPage } from "./actions";
-import { PAGE, PRODUCT_CATEGORY, PRODUCT, RESERVED, SEARCH } from "./pageTypes";
+import { setCurrentPage } from './actions';
+import { PAGE, PRODUCT_CATEGORY, PRODUCT, RESERVED, SEARCH } from './pageTypes';
 
 class SwitchContainers extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+	constructor(props) {
+		super(props);
+	}
 
-  componentWillReceiveProps(nextProps) {
-    this.props.setCurrentPage(nextProps.location);
+	componentWillReceiveProps(nextProps) {
+		this.props.setCurrentPage(nextProps.location);
 
-    if (nextProps.location && this.props.location) {
-      const pathnameChanged =
-        nextProps.location.pathname !== this.props.location.pathname;
-      const queryChanged =
-        nextProps.location.search !== this.props.location.search;
-      const isSearchPage = nextProps.location.pathname === "/search";
+		if (nextProps.location && this.props.location) {
+			const pathnameChanged = nextProps.location.pathname !== this.props.location.pathname;
+			const queryChanged = nextProps.location.search !== this.props.location.search;
+			const isSearchPage = nextProps.location.pathname === '/search';
 
-      if (pathnameChanged || (queryChanged && isSearchPage)) {
-        animateScroll.scrollToTop({
-          duration: 500,
-          delay: 100,
-          smooth: true
-        });
-      }
-    }
-  }
+			if (pathnameChanged || queryChanged && isSearchPage) {
+				animateScroll.scrollToTop({
+					duration: 500,
+					delay: 100,
+					smooth: true
+				});
+			}
+		}
+	}
 
-  render() {
-    const { history, location, currentPage } = this.props;
-    const locationPathname =
-      location && location.pathname ? location.pathname : "/";
+	render() {
+		const { history, location, currentPage } = this.props;
+		const locationPathname = location && location.pathname ? location.pathname : '/';
 
-    switch (currentPage.type) {
-      case PRODUCT:
-        return React.createElement(ProductContainer, null);
-      case PRODUCT_CATEGORY:
-        return React.createElement(CategoryContainer, null);
-      case SEARCH:
-        return React.createElement(SearchContainer, null);
-      case PAGE:
-        if (locationPathname === "/") {
-          return React.createElement(IndexContainer, null);
-        } else if (locationPathname === "/checkout") {
-          return React.createElement(CheckoutContainer, null);
-        }
-        if (locationPathname === "/checkout-success") {
-          return React.createElement(CheckoutSuccessContainer, null);
-        } else {
-          return React.createElement(PageContainer, null);
-        }
-      default:
-        return React.createElement(NotFoundContainer, null);
-    }
-  }
+		switch (currentPage.type) {
+			case PRODUCT:
+				return React.createElement(ProductContainer, null);
+			case PRODUCT_CATEGORY:
+				return React.createElement(CategoryContainer, null);
+			case SEARCH:
+				return React.createElement(SearchContainer, null);
+			case PAGE:
+				if (locationPathname === '/') {
+					return React.createElement(IndexContainer, null);
+				} else if (locationPathname === '/checkout') {
+					return React.createElement(CheckoutContainer, null);
+				}
+				if (locationPathname === '/checkout-success') {
+					return React.createElement(CheckoutSuccessContainer, null);
+				} else {
+					return React.createElement(PageContainer, null);
+				}
+			default:
+				return React.createElement(NotFoundContainer, null);
+		}
+	}
 }
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    currentPage: state.app.currentPage
-  };
+	return {
+		currentPage: state.app.currentPage
+	};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    setCurrentPage: location => {
-      dispatch(setCurrentPage(location));
-    }
-  };
+	return {
+		setCurrentPage: location => {
+			dispatch(setCurrentPage(location));
+		}
+	};
 };
 
-const SwitchContainersConnected = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SwitchContainers);
+const SwitchContainersConnected = connect(mapStateToProps, mapDispatchToProps)(SwitchContainers);
 
-const App = () =>
-  React.createElement(
-    SharedContainer,
-    null,
-    React.createElement(Route, { component: SwitchContainersConnected })
-  );
+const App = () => React.createElement(
+	SharedContainer,
+	null,
+	React.createElement(Route, { component: SwitchContainersConnected })
+);
 
 export default App;
